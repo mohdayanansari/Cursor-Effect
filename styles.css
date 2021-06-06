@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Sherbet';
+    src: url('./assets/fonts/Sherbet\ BF\ W01\ Regular.ttf');
+}
+body{
+    cursor: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    min-height: 15vh;
+    align-items: center;
+    margin: auto;
+}
+nav h1{
+    font-family: Sherbet;
+    font-size:3rem;
+}
+.nav-links{
+    display: flex;
+    justify-content:space-between;
+    list-style: none;
+    font-family: sans-serif; 
+}
+
+.nav-links, h1{
+    flex: 1;
+}
+.nav-links li{
+    padding: 1rem;
+}
+
+.cursor{
+    height: 50px;
+    width: 50px;
+    border: solid 2px white;
+    background-color: rgba(255, 0, 0, 0.082);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transition-property: background, transform;
+    transform-origin: 100% 100%;
+    backdrop-filter: grayscale(); /*blur(10px)*/
+}
+
+/* js-cursor-css/ */
+.link-grow{
+    transform: scale(2);
+    background-color: black;
+}
+
+.link-show{
+    color: #ffffff;
+    z-index: 2;
+}
+.fgrow-gray{
+    transform: scale(2);
+}
+/* js-cursor-css----->> */
+
+.front-cover{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+    background-image: url(/assets/img/one.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -5;
+    height: 85vh;
+}
+.front-cover h1{
+    font-family: Sherbet;
+    font-size:7rem;
+    color: #ffffff;
+    font-weight: 100;
+}
